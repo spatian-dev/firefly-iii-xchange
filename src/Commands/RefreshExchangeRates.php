@@ -18,22 +18,27 @@ class RefreshExchangeRates extends Command {
     private string $fireflyToken;
     private string $currency;
 
-    protected $signature = 'xchange:refresh';
+    protected $signature = 'xchange:refresh {--C|currency=}';
     protected $description = 'Fetches fresh exchange rates from the configured service and updates them in Firefly III';
 
     public function __construct() {
+        parent::__construct();
+
         $this->package = App::make(PackageService::class);
         $this->service = App::make(ExchangeRateService::class);
         $this->fireflyApi = Str::chopEnd($this->package->config("firefly.api", ""), "/");
         $this->fireflyToken = $this->package->config("firefly.token", "");
         $this->currency = $this->package->config("source_currency", "");
-
-        parent::__construct();
     }
 
     public function handle() {
+        if ($this->option('currency')) {
+            $this->currency = $this->option('currency');
+            $this->info("Currency option provided, using \"{$this->currency}\"");
+        }
+
         if (Str::blank($this->currency)) {
-            $this->warn("No source currency configured, exiting.");
+            $this->warn("No source currency provided, exiting.");
             return;
         }
 
