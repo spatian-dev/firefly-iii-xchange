@@ -1,0 +1,82 @@
+{
+    "name": "spatian-dev/firefly-iii-xchange",
+    "description": "An exchange rates API services integration for Firefly III",
+    "version": "0.1.0",
+    "type": "library",
+    "license": "Apache-2.0",
+    "autoload": {
+        "psr-4": {
+            "Spatian\\FireflyIIIXchange\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Spatian\\FireflyIIIXchange\\Tests\\": "tests/",
+            "Workbench\\App\\": "workbench/app/",
+            "Workbench\\Database\\Factories\\": "workbench/database/factories/",
+            "Workbench\\Database\\Seeders\\": "workbench/database/seeders/"
+        }
+    },
+    "authors": [
+        {
+            "name": "SAAD SIDQUI",
+            "email": "contact@spatian.dev"
+        }
+    ],
+    "homepage": "https://firefly-iii-xchange.spatian.dev",
+    "bugs": "https://github.com/spatian-dev/firefly-iii-xchange/issues",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/spatian-dev/firefly-iii-xchange.git"
+    },
+    "readme": "readme.md",
+    "keywords": [
+        "xchange",
+        "laravel",
+        "firefly",
+        "firefly iii",
+        "exchange",
+        "rate",
+        "currency",
+        "package"
+    ],
+    "platform": {
+        "php": "8.4"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "require": {
+        "php": "^8.4",
+        "illuminate/support": "^12.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^10.9",
+        "pestphp/pest": "^4.3"
+    },
+	"extra": {
+        "laravel": {
+            "providers": [
+                "Spatian\\FireflyIIIXchange\\Providers\\FireflyXchangeServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "@clear",
+            "@prepare"
+        ],
+        "clear": "@php vendor/bin/testbench package:purge-skeleton --ansi",
+        "prepare": "@php vendor/bin/testbench package:discover --ansi",
+        "build": "@php vendor/bin/testbench workbench:build --ansi",
+        "serve": [
+            "Composer\\Config::disableProcessTimeout",
+            "@build",
+            "@php vendor/bin/testbench serve --ansi"
+        ]
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
