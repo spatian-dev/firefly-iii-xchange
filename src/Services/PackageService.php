@@ -18,7 +18,7 @@ final class PackageService {
     }
 
     public function version(): string {
-        return $this->composer['version'];
+        return '0.1.0';
     }
 
     public function name(): string {

@@ -27,8 +27,8 @@ class RefreshExchangeRates extends Command {
         $this->package = App::make(PackageService::class);
         $this->service = App::make(ExchangeRateService::class);
         $this->fireflyApi = Str::chopEnd($this->package->config("firefly.api", ""), "/");
-        $this->fireflyToken = $this->package->config("firefly.token", "");
-        $this->currency = $this->package->config("source_currency", "");
+        $this->fireflyToken = $this->package->config("firefly.token") ?? "";
+        $this->currency = $this->package->config("source_currency") ?? "";
     }
 
     public function handle() {

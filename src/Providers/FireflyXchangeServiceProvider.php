@@ -10,6 +10,7 @@ use RuntimeException;
 use Spatian\FireflyIIIXchange\Commands\RefreshExchangeRates;
 use Spatian\FireflyIIIXchange\Contracts\ExchangeRateService;
 use Spatian\FireflyIIIXchange\Enums\AvailableExchangeRateServices;
+use Spatian\FireflyIIIXchange\Services\DummyExchangeRatesService;
 use ValueError;
 
 final class FireflyXchangeServiceProvider extends ServiceProvider {
@@ -39,6 +40,8 @@ final class FireflyXchangeServiceProvider extends ServiceProvider {
 
     private function bindBootServices(): void {
         $service = AvailableExchangeRateServices::tryFrom($this->package->config("service", ""));
+        $serviceHandler = DummyExchangeRatesService::class;
+
         if ($service !== null) {
             $serviceHandler = $this->package->config("{$service->value}.handler");
             if ($serviceHandler === null) {
@@ -46,8 +49,8 @@ final class FireflyXchangeServiceProvider extends ServiceProvider {
                     "Invalid exchange rate service handler for \"{$service->value}\""
                 );
             }
-            $this->app->singleton(ExchangeRateService::class, fn() => new $serviceHandler);
         }
+        $this->app->singleton(ExchangeRateService::class, fn() => new $serviceHandler);
     }
 
     private function registerCommands(): void {

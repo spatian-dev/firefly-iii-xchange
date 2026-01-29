@@ -1,7 +1,8 @@
 laravel: '@testbench'
 
 providers:
-  # - Workbench\App\Providers\WorkbenchServiceProvider
+  - Workbench\App\Providers\WorkbenchServiceProvider
+  - Spatian\FireflyIIIXchange\Providers\FireflyXchangeServiceProvider
 
 migrations:
   - workbench/database/migrations

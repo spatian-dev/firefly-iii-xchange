@@ -1,7 +1,6 @@
 {
     "name": "spatian-dev/firefly-iii-xchange",
     "description": "An exchange rates API services integration for Firefly III",
-    "version": "0.1.0",
     "type": "library",
     "license": "Apache-2.0",
     "autoload": {
@@ -24,11 +23,6 @@
         }
     ],
     "homepage": "https://firefly-iii-xchange.spatian.dev",
-    "bugs": "https://github.com/spatian-dev/firefly-iii-xchange/issues",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/spatian-dev/firefly-iii-xchange.git"
-    },
     "readme": "readme.md",
     "keywords": [
         "xchange",
@@ -40,9 +34,6 @@
         "currency",
         "package"
     ],
-    "platform": {
-        "php": "8.4"
-    },
     "minimum-stability": "stable",
     "prefer-stable": true,
     "require": {
