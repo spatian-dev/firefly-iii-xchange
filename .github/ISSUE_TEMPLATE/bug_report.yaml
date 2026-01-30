@@ -1,0 +1,28 @@
+name: Bug Report
+description: Report an issue with Firefly III Xchange
+body:
+  - type: input
+    attributes:
+      label: Firefly III Xchange version
+      placeholder: E.g. v0.1.0
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Firefly III
+      placeholder: E.g. v6.4.16
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Description
+      description: Describe clear the behaviour you're encountering, steps to reproduce it, and the expected behaviour.
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Minimal Reproducible Example repository
+      description: Link to a public MRE repository
+      placeholder: https://github.com/example/my-mre
+    validations:
+      required: true
