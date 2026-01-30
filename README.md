@@ -77,7 +77,7 @@ Then add as many lines as necessary to schedule updates. These lines will look s
 ```
 * * * * * php <path-to-firefly-iii>/artisan xchange:refresh
 ```
-Make sure your replace `<path-to-firefly-iii>` with the actual absolute path to your Firefly III installation. The asterisk at the beginning are where the schedule can be configured, see [Cron on Wikipedia](https://en.wikipedia.org/wiki/Cron) and the [Cron article on Firefly III's documentation](https://docs.firefly-iii.org/how-to/firefly-iii/advanced/cron/) for more details.
+Make sure your replace `<path-to-firefly-iii>` with the actual absolute path to your Firefly III installation. The asterisks at the beginning are where the schedule can be configured, see [Cron on Wikipedia](https://en.wikipedia.org/wiki/Cron) and the [Cron article on Firefly III's documentation](https://docs.firefly-iii.org/how-to/firefly-iii/advanced/cron/) for more details.
 
 For example, the following cron lines will fetch CAD exchange rates every day at 1:00 AM, and USD exchange rates every day at 2:00 AM
 ```
