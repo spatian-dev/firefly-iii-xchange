@@ -1,0 +1,33 @@
+{
+    "name": "firefly-iii-xchange",
+    "description": "An exchange rates API services integration for Firefly III",
+    "version": "0.1.0",
+    "type": "module",
+    "keywords": [
+        "xchange",
+        "laravel",
+        "firefly",
+        "firefly iii",
+        "exchange",
+        "rate",
+        "currency",
+        "package"
+    ],
+    "author": {
+        "name": "Saad Sidqui",
+        "email": "contact@spatian.dev"
+    },
+    "license": "Apache-2.0",
+    "homepage": "https://firefly-iii-xchange.spatian.dev",
+    "bugs": "https://github.com/spatian-dev/firefly-iii-xchange/issues",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/spatian-dev/firefly-iii-xchange.git"
+    },
+    "devDependencies": {
+        "marked": "^15.0.3",
+        "marked-base-url": "^1.1.6"
+    },
+    "scripts": {
+    }
+}
