@@ -47,7 +47,7 @@ XCHANGE_SERVICE=<external_api>
 If this variable is left empty, Firefly III Xchange will be disabled and will not update exchange rates.
 Currently supported services are listed below.
 
-> ⚠️ **Disclaimer:** Please note that the authors of this package maintain no relationship or affiliation with any of the services listed above.
+> ⚠️ **Disclaimer:** Please note that the authors of this package maintain no relationship or affiliation with any of the services listed below.
 
 #### Exchangerate.host
 [Exchangerate.host](https://exchangerate.host) is a paid service with a free tier.
