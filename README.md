@@ -57,7 +57,7 @@ Currently supported services are listed below.
 ## Usage
 
 ### Manually Running The Command
-To exchange rates using your configured service and currency, simply run
+To update exchange rates using your configured service and currency, simply run
 ```sh
 php artisan xchange:refresh
 ```
