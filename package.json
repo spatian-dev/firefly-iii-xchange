@@ -1,7 +1,7 @@
 {
     "name": "firefly-iii-xchange",
     "description": "An exchange rates API services integration for Firefly III",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "type": "module",
     "keywords": [
         "xchange",

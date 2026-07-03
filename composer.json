@@ -38,11 +38,11 @@
     "prefer-stable": true,
     "require": {
         "php": "^8.4",
-        "illuminate/support": "^12.0"
+        "illuminate/support": "^13.0"
     },
     "require-dev": {
-        "orchestra/testbench": "^10.9",
-        "pestphp/pest": "^4.3"
+        "orchestra/testbench": "^11.1",
+        "pestphp/pest": "^4.7"
     },
 	"extra": {
         "laravel": {
